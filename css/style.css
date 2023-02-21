@@ -155,6 +155,7 @@ body {
 @media (min-width: 320px) and (max-width: 772px) {
   body {
     min-width: 310px;
+    overflow: auto;
   }
   .buttons_container {
     margin: 10px 0 20px 0;
@@ -185,8 +186,11 @@ body {
 }
 
 @media (any-pointer: coarse) and (orientation: landscape) {
+  body {
+    overflow: auto;
+  }
   .buttons_container {
-    margin: 10px 0 10px 0;
+    margin: 10px 0 20px 0;
   }
   .product_container {
     min-width: 320px;
@@ -218,9 +222,5 @@ body {
     background-color: white;
     box-shadow: none;
     transform: none;
-  }
-  .btn {
-    width: 120px;
-    height: 30px;
   }
 }
