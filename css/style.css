@@ -163,6 +163,11 @@ body {
     width: 130px;
     height: 50px;
   }
+  .btn:hover {
+    background-color: white;
+    box-shadow: none;
+    transform: none;
+  }
   #root {
     min-width: 320px;
   }
@@ -175,13 +180,13 @@ body {
     min-width: 320px;
   }
   .product_img {
-    width: 310px;
+    width: 300px;
   }
 }
 
 @media (any-pointer: coarse) and (orientation: landscape) {
   .buttons_container {
-    margin: 10px 0 20px 0;
+    margin: 10px 0 10px 0;
   }
   .product_container {
     min-width: 320px;
@@ -208,5 +213,14 @@ body {
     align-items: center;
     justify-content: center;
     gap: 20px;
+  }
+  .btn:hover {
+    background-color: white;
+    box-shadow: none;
+    transform: none;
+  }
+  .btn {
+    width: 120px;
+    height: 30px;
   }
 }
