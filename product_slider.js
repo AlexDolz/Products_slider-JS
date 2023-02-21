@@ -44,7 +44,12 @@ function renderProduct({ images, title, price, rating }) {
   productPrice.className = 'product_text';
   productPrice.innerText = `Price: ${price}$`;
 
-  productCard.append(productImg, productTitle, productPrice, getRating(rating));
+  const textContainer = document.createElement('div');
+  textContainer.className = 'text_container';
+
+  // productCard.append(productImg, productTitle, productPrice, getRating(rating));
+  productCard.append(productImg, textContainer);
+  textContainer.append(productTitle, productPrice, getRating(rating));
   productContainer.append(productCard);
   root.append(productContainer);
 }
