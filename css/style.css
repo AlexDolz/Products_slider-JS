@@ -157,7 +157,7 @@ body {
     min-width: 310px;
   }
   .buttons_container {
-    margin: 80px 0 30px 0;
+    margin: 30px 0 30px 0;
   }
   .btn {
     width: 130px;
@@ -179,7 +179,7 @@ body {
 
 @media (any-pointer: coarse) and (orientation: landscape) {
   .buttons_container {
-    margin: 50px 0 10px 0;
+    margin: 30px 0 10px 0;
   }
   .product_card {
     flex-direction: row;
