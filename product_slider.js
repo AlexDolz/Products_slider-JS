@@ -1,16 +1,5 @@
 // ************************ Task ****************************************
 
-// Задана ссылка на источник:
-// let url = "https://dummyjson.com/products"
-
-// Цель задачи -  реализовать страницу с переключением товаров. К работе выдвинуты следующие требования:
-
-// Структура страницы должна приблизительно соответствовать макету (см ниже). Стилизация элементов может быть произвольной
-// Должны быть реализованы следующие функции: fetch, render, rating и события для кнопок.
-// В момент загрузки страницы должен отображаться первый товар (id = 1)
-// После наступления события должен формироваться новый запрос, получающий id следующего/предыдущего товара.
-// Предусмотрите возможность ограничить переключение на несуществующие товары (id которых меньше 1 или больше 30)
-
 let url = 'https://dummyjson.com/products';
 const root = document.querySelector('#root');
 
@@ -79,23 +68,17 @@ let n = 1;
 
 const [prevBtn, nextBtn] = document.querySelectorAll('button');
 
-function changeProduct(n) {
-  fetch(`https://dummyjson.com/products/${n}`)
-    .then(res => res.json())
-    .then(data => renderProduct(data));
-}
-
 prevBtn.addEventListener('click', () => {
   if (n === 1) {
     n = 31;
   }
-  changeProduct(--n);
+  getProducts(--n);
 });
 nextBtn.addEventListener('click', () => {
   if (n === 30) {
     n = 0;
   }
-  changeProduct(++n);
+  getProducts(++n);
 });
 
 getProducts(1);
